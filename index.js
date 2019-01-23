@@ -1,6 +1,6 @@
 const { Transform } = require('stream')
-
-function JsonStringifyTrough (replacer, space) {
+let { stringify } = JSON
+function JsonStringifyTrough (replacer, space, stringifier) {
   if (typeof replacer !== 'function') {
     space = replacer
     replacer = undefined
@@ -9,9 +9,13 @@ function JsonStringifyTrough (replacer, space) {
     space = undefined
   }
 
+  if (stringifier && typeof stringifier !== 'function') {
+    throw new Error('stringifier must be function')
+  }
+
   let first = true
   function transform (obj, encoding, cb) {
-    const str = JSON.stringify(obj, replacer, space)
+    const str = (stringifier || stringify)(obj, replacer, space)
     if (first) {
       first = false
       this.push(`[${str}`)

@@ -2,6 +2,14 @@ const test = require('tape')
 const { Readable, Writable } = require('stream')
 const JsonStringifyTrough = require('./index')
 
+test('should throw arg err', t => {
+  t.plan(1)
+  t.throws(
+    () => new JsonStringifyTrough('\t', undefined, 'not a fn'),
+    'stringifier must be function'
+  )
+})
+
 test('should stringify array of objects into JSON', t => {
   t.plan(1)
   let actual = ''
@@ -75,7 +83,11 @@ test('should use spaces', t => {
   let actual = ''
 
   function finish () {
-    t.deepEqual(actual, '[{\n "a": 1\n},{\n "b": 2\n}]', 'expected to use spaces')
+    t.deepEqual(
+      actual,
+      '[{\n "a": 1\n},{\n "b": 2\n}]',
+      'expected to use spaces'
+    )
   }
 
   const source = new Readable({
@@ -109,7 +121,11 @@ test('should use tabs', t => {
   let actual = ''
 
   function finish () {
-    t.deepEqual(actual, '[{\n\t"a": 1\n},{\n\t"b": 2\n}]', 'expected to use tabs')
+    t.deepEqual(
+      actual,
+      '[{\n\t"a": 1\n},{\n\t"b": 2\n}]',
+      'expected to use tabs'
+    )
   }
 
   const source = new Readable({

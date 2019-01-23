@@ -1,10 +1,21 @@
 {
   "name": "json-stringify-trough",
+  "dependencies": {},
+  "devDependencies": {
+    "standard": "^12.0.1",
+    "tape": "^4.9.1",
+    "nyc": "^13.1.0"
+  },
   "version": "1.0.0",
   "description": "Simply stringify a readable stream in objectMode and get that array as a complete valid JSON at readable side of transform stream.",
   "main": "index.js",
+  "enginesStrict": "true",
+  "engines": {
+    "node": ">6"
+  },
   "scripts": {
-    "test": "node test"
+    "test": "node test",
+    "coverage": "nyc node test && nyc report --reporter=html"
   },
   "repository": {
     "type": "git",
@@ -21,8 +32,5 @@
   "bugs": {
     "url": "https://github.com/big-kahuna-burger/json-stringify-trough/issues"
   },
-  "homepage": "https://github.com/big-kahuna-burger/json-stringify-trough#readme",
-  "devDependencies": {
-    "tape": "^4.9.1"
-  }
+  "homepage": "https://github.com/big-kahuna-burger/json-stringify-trough#readme"
 }
