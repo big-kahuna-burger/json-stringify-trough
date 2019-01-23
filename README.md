@@ -4,6 +4,8 @@
 
 [![Build Status](https://travis-ci.org/big-kahuna-burger/json-stringify-trough.svg?branch=master)](https://travis-ci.org/big-kahuna-burger/json-stringify-trough)
 
+[![Coverage Status](https://coveralls.io/repos/github/big-kahuna-burger/json-stringify-trough/badge.svg?branch=master)](https://coveralls.io/github/big-kahuna-burger/json-stringify-trough?branch=master)
+
 Simply stringify a readable stream in objectMode and get that array as a complete valid JSON at readable side of transform stream.
 
 Usefull if you want to do something like:
