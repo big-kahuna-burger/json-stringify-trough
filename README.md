@@ -1,6 +1,6 @@
 # json-stringify-trough
 
-[![npm](https://img.shields.io/npm/v/json-stringify-trough.svg)](npmjs)
+[![npm](https://img.shields.io/npm/v/json-stringify-trough.svg)](https://www.npmjs.com/package/json-stringify-trough)
 
 [![Known Vulnerabilities](https://snyk.io/test/github/big-kahuna-burger/json-stringify-trough/badge.svg?targetFile=package.json)](https://snyk.io/test/github/big-kahuna-burger/json-stringify-trough?targetFile=package.json)
 
