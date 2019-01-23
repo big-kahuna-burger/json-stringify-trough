@@ -5,3 +5,10 @@ node_js:
   - "8"
   - "9"
   - "10"
+scripts:
+  - test: nyc npm test && nyc report --reporter=text-lcov | coveralls
+cache:
+  directories:
+    - node_modules
+after_script:
+  - npm run coverage

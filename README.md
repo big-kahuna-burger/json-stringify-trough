@@ -1,6 +1,8 @@
 # JSON-stringify-trough
 [![Known Vulnerabilities](https://snyk.io/test/github/big-kahuna-burger/json-stringify-trough/badge.svg?targetFile=package.json)](https://snyk.io/test/github/big-kahuna-burger/json-stringify-trough?targetFile=package.json)
 
+[![Build Status](https://travis-ci.org/big-kahuna-burger/json-stringify-trough.svg?branch=master)](https://travis-ci.org/big-kahuna-burger/json-stringify-trough)
+
 
 Simply stringify a readable stream in objectMode and get that array as a complete valid JSON at readable side of transform stream.
 
